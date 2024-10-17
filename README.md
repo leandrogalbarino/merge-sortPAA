@@ -1,2 +1,2 @@
-# merge-sortPAA
-Trabalho de Pesquisa e Análise de Algoritmos
+# Merge sort PAA
+    Trabalho de Pesquisa e Análise de Algoritmos
