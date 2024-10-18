@@ -4,10 +4,10 @@ import numpy as np
 # Junta as partes do array, fazendo o merge 
 # Esta função recebe um array e dois subarrays que foram divididos pela função merge_sort.
 # Ela vai mesclar esses subarrays de volta em uma única parte ordenada no array original.
-def merge(array, left, middle, right):
+def merge(array, left, mid, right):
     # Define o tamanho dos dois subarrays a serem mesclados.
-    n1 = middle - left + 1  # Tamanho do subarray esquerdo
-    n2 = right - middle      # Tamanho do subarray direito
+    n1 = mid - left + 1  # Tamanho do subarray esquerdo
+    n2 = right - mid      # Tamanho do subarray direito
 
     # Cria dois arrays temporários para armazenar os valores do subarray esquerdo e direito.
     left_array = np.zeros(n1)
@@ -17,7 +17,7 @@ def merge(array, left, middle, right):
     for i in range(n1):
         left_array[i] = array[left + i]
     for j in range(n2):
-        right_array[j] = array[middle + 1 + j]
+        right_array[j] = array[mid + 1 + j]
 
     # Inicializa os índices para percorrer o subarray esquerdo (i), direito (j) e o array original (k).
     i = 0

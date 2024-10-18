@@ -28,7 +28,7 @@ def gerar_arrays(tamanho=10000, max_valor=333001):
 
     return array_ordenado, array_semi_ordenado, array_desordenado, array_totalmente_desordenado
 
-#Copia arrays
+
 def copiar_arrays(array_ordenado, array_semi_ordenado, array_desordenado, array_totalmente_desordenado):
     array_ordenado_copia = array_ordenado.copy()
     array_semi_ordenado_copia = array_semi_ordenado.copy()
@@ -61,10 +61,10 @@ def tempo(algoritmo,array):
 
 def exibir_tempo_execucao(nome, resultados):
     print(f"Tempos de execução da ordenação - {nome}:")
-    print(f"Tempo de execução - Array ordenado: {resultados[0]}")
-    print(f"Tempo de execução - Array semi-ordenado: {resultados[1]}")
-    print(f"Tempo de execução - Array desordenado: {resultados[2]}")
-    print(f"Tempo de execução - Array totalmente desordenado: {resultados[3]}\n")
+    print(f"Tempo de execução - Array ordenado: {resultados[0]:.6f}s")
+    print(f"Tempo de execução - Array semi-ordenado: {resultados[1]:.6f}s")
+    print(f"Tempo de execução - Array desordenado: {resultados[2]:.6f}s")
+    print(f"Tempo de execução - Array totalmente desordenado: {resultados[3]:.6f}s\n")
 
 
 tam_array = pedir_numero_int("Digite o tamanho do array:")
@@ -78,7 +78,7 @@ array_ordenado3, array_semi_ordenado3, array_desordenado3, array_totalmente_deso
     array_ordenado1, array_semi_ordenado1, array_desordenado1, array_totalmente_desordenado1
 )
 
-print("Arrays gerados e copiados com sucesso!")
+print("Arrays gerados e copiados com sucesso!\n")
 
 #Os tempos de execução para cada algoritmo
 resultados_mergesort = [
@@ -108,4 +108,4 @@ print(f"Quantidade de valores no array - {tam_array}")
 exibir_tempo_execucao("Merge Sort", resultados_mergesort)
 exibir_tempo_execucao("Quick Sort", resultados_quicksort)
 exibir_tempo_execucao("Insertion Sort", resultados_insertionsort)
-
+input()
